@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction du résultat baccalauréat</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom CSS file -->
+    <link rel="stylesheet" type="text/css" href="/static/styles_index.css">
+
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Prédiction de la Réussite au Baccalauréat en Mauritanie</h1>
+        <form action="/predict/csv" method="post" enctype="multipart/form-data" class="mb-4">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="file" name="file" accept=".csv">
+                <label class="custom-file-label" for="file">Choisir un fichier CSV</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Predict</button>
+        </form>
+        <form action="/prediction_result" method="post" class="mb-4">
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" class="form-control" id="nom" name="nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="etablissement">Etablissement:</label>
+                <input type="text" class="form-control" id="etablissement" name="etablissement" required>
+            </div>
+
+            <div class="form-group">
+                <label for="serie">Serie,x:</label>
+                <input type="text" class="form-control" id="serie" name="serie" required>
+            </div>
+
+            <div class="form-group">
+                <label for="centre">Centre:</label>
+                <input type="text" class="form-control" id="centre" name="centre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="willaya">Willaya:</label>
+                <input type="text" class="form-control" id="willaya" name="willaya" required>
+            </div>
+
+            <div class="form-group">
+                <label for="moughataa">Moughataa:</label>
+                <input type="text" class="form-control" id="moughataa" name="moughataa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+
+    </div>
+    <!-- Add Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

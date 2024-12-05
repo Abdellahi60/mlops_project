@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    
+
+</head>
+<body>
+    {% for i in result %}
+    <h2> {{ i['name'] }} </h2>
+    <p>{{ i['Prediction'] }}</p>
+    {% endfor %}
+</body>
+</html>
